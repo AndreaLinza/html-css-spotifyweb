@@ -1,0 +1,35 @@
+ul{
+    list-style: none;  
+}
+
+span{
+    display: inline-block;
+}
+a:hover img{
+    filter: brightness(100%);
+}
+a{
+    display: inline-block;
+    font-size: .8rem;
+    color: var(--color-link);
+    text-decoration: none;
+    font-weight: bolder;
+}
+a:hover{
+    color: white;
+}
+
+.pd-1all{
+    padding: 1rem;
+}
+.pd-1b{
+    padding-bottom: 1rem;
+}
+.mg-1b{
+    margin-bottom: 1rem;
+}
+
+
+.home-container li{
+    border-left: 2px var(--color-icon) solid;    /************BORDO VERDE**************/
+}
