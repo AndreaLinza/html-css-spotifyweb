@@ -5,7 +5,7 @@
     --color-top-nav: #151015;
     --color-icon: #A5FD52;
     --color-link: #717171;
-    --my-gap: 1rem;
+    --my-gap: .5rem;
 }
 
 * {
@@ -31,7 +31,6 @@ body>*,
 .main-container>* {
     min-width: 100px;
     min-height: 100px;
-    border: 1px solid red;
 }
 
 .main-container {
@@ -63,9 +62,54 @@ body>*,
     justify-content: space-between;
 }
 
-.aside-container>img {
-    max-width: 150px;
+
+.home-container>img {
+    max-width: 160px;
 }
+
+.playlist-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: auto;
+    
+    
+}
+.playlist-container>ul{
+    flex-grow: 1;
+    overflow: auto;
+}
+/*********** Pulsante Crea Playlist *************/
+.playlist-container>div{
+    margin: .5rem 0;
+}
+.bt-plus {
+    width: 40px;
+    height: 40px;
+    padding: .5rem 0;
+    line-height: 20px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    background-color: var(--color-link);
+    color: var(--color-secondary);   
+}
+.link-bt{
+    padding: 0 .3rem;
+    font-size: 16px;
+    vertical-align: 5px;
+}
+.bt-none{
+    background-color: var(--color-secondary);
+    border: 0;
+    padding: .2rem 0;
+
+}
+
+.playlist-container li:first-child:hover .bt-plus {
+    background-color: white;
+}
+
 
 .login ul li:first-child {
     border-bottom: 1px solid white;
@@ -81,20 +125,6 @@ body>*,
     display: inline-block;
     position: relative;
     bottom: 8px;
-}
-
-.bt-plus {
-    width: 35px;
-    height: 38px;
-    font-size: 2rem;
-    background-color: var(--color-link);
-    color: var(--color-secondary);
-    text-align: center;
-    line-height: 35px;
-}
-
-.playlist-container li:first-child:hover .bt-plus {
-    background-color: white;
 }
 
 /* ********** UPGRADE SECTION *************** */
@@ -114,7 +144,6 @@ body>*,
     padding: 1rem;
     flex-grow: 1;
     overflow: auto;
-    border: 1px solid red;
 
 }
 
@@ -127,11 +156,16 @@ body>*,
     padding: 0 .5rem;
 }
 
-.container-row {}
+/* ************ CONTAINER CARD *************** */
+
+.container-row {
+
+}
 
 .row {
-    border: 1px solid rgb(27, 2, 136);
+    border: 1px solid rgb(136, 2, 118);
     display: flex;
+    flex-grow: 1;
     flex-wrap: nowrap;
     gap: var(--my-gap);
 }
@@ -145,13 +179,12 @@ body>*,
 }
 
 .col-1-6 {
-
     aspect-ratio: 1/1;
-    flex-basis: calc(100% / 6);
+    flex-basis: calc((100% / 6)  - var(--my-gap));
 }
 
 .bg-card{
-    flex-grow: 1;
+    
 }
 
 .description-card{
@@ -173,13 +206,13 @@ body>*,
         gap: var(--my-gap);
     }
     .col-med{
-        flex-grow: 1;
+        flex-grow: 0;
         flex-basis: 0;
         border: 1px dashed yellow;
     }
 
     .col-1-4-med{
-        flex-basis:calc(100% / 4);
+        flex-basis:calc(100% / 5);
     }
 }
 

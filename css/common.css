@@ -19,13 +19,13 @@ a:hover{
     color: white;
 }
 .link-up{
-    position: relative;
-    bottom: 9px;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: top;
 }
 .link-up-sm{
-    position: relative;
-    left: 5px;
-    bottom: 4px;
+    display: inline-block;
+    vertical-align: super;
 }
 .icon{
     filter: brightness(70%);
@@ -54,6 +54,9 @@ button{
     border-radius: 1.5rem;
     margin-right: .5rem;
 }
+button:hover{
+    cursor: pointer;
+}
 
 
 .home-container li{
@@ -64,6 +67,7 @@ button{
 /* ************* Background Img Album**************** */
 .row-recently .bg-card{
     background-size: contain;
+    aspect-ratio: 1/1;
     background-repeat: no-repeat;
 }
 
