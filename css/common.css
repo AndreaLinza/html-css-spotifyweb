@@ -36,16 +36,22 @@ a:hover{
 .icon-sm{
     width: 1rem;
 }
+/********************* Distanze ********************/
 
 .pd-1all{
     padding: 1rem;
 }
+.pd-1t-1b{
+    padding: 1rem 0;
+}
+
 .pd-1b{
     padding-bottom: 1rem;
 }
 .mg-1b{
     margin-bottom: 1rem;
 }
+/************* Button Default ****************/
 
 button{
     background-color: var(--color-top-nav);
@@ -58,18 +64,29 @@ button:hover{
     cursor: pointer;
 }
 
+/************BORDO VERDE**************/
+.home-container .desktop li:first-child{
+    border-left: 3px var(--color-icon) solid;    
+}
 
-.home-container li{
-    border-left: 2px var(--color-icon) solid;    /************BORDO VERDE**************/
+.category hr{
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: var(--color-icon);
+    height: 1px;
+
+    width: 30px;
+
 }
 
 
-/* ************* Background Img Album**************** */
-.row-recently .bg-card{
-    background-size: contain;
-    aspect-ratio: 1/1;
-    background-repeat: no-repeat;
+.home-container .desktop li:first-child a{
+    margin-left: -5px;
 }
+/***************************************/
+
+/* ************* Recently Background Img **************** */
 
 .row-recently div:first-child .bg-card{
     background-image: url(../img/metal_lifting.jpg);
@@ -89,5 +106,24 @@ button:hover{
 }
 .row-recently div:nth-child(6) .bg-card{
     background-image: url(../img/sinister.jpeg);
+}
+
+/********************* Playlist Background Img  *****************/
+.suggest-row div:first-child .bg-card{
+    background-image: url(../img/radar.jpeg);
+
+}
+.suggest-row div:nth-child(2) .bg-card{
+    background-image: url(../img/mixdaily.jpeg);
+}
+
+/* ***************** Popular Background Img ******************** */
+
+.popular-row div:first-child .bg-card{
+    background-image: url(../img/youg.jpeg);
+    border-radius: 50%;
+}
+.popular-row div:nth-child(2) .bg-card{
+    background-image: url(../img/einaudi.jpeg);
 }
 

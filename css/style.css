@@ -5,7 +5,7 @@
     --color-top-nav: #151015;
     --color-icon: #A5FD52;
     --color-link: #717171;
-    --my-gap: .5rem;
+    --my-gap: .8rem;
 }
 
 * {
@@ -62,27 +62,34 @@ body>*,
     justify-content: space-between;
 }
 
+.mobile{
+    display: none;
+}
+
 
 .home-container>img {
     max-width: 160px;
 }
 
-.playlist-container{
+.playlist-container {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     overflow: auto;
-    
-    
+
+
 }
-.playlist-container>ul{
+
+.playlist-container>ul {
     flex-grow: 1;
     overflow: auto;
 }
+
 /*********** Pulsante Crea Playlist *************/
-.playlist-container>div{
+.playlist-container>div {
     margin: .5rem 0;
 }
+
 .bt-plus {
     width: 40px;
     height: 40px;
@@ -92,24 +99,29 @@ body>*,
     border-radius: 10px;
     font-size: 1.8rem;
     background-color: var(--color-link);
-    color: var(--color-secondary);   
+    color: var(--color-secondary);
 }
-.link-bt{
+
+.link-bt {
     padding: 0 .3rem;
-    font-size: 16px;
+    font-size: 1rem;
     vertical-align: 5px;
+    color: var(--color-link);
 }
-.bt-none{
+
+.bt-none:hover .link-bt {
+    color: white;
+}
+
+.bt-none {
     background-color: var(--color-secondary);
     border: 0;
     padding: .2rem 0;
-
 }
 
-.playlist-container li:first-child:hover .bt-plus {
+.bt-none:hover .bt-plus {
     background-color: white;
 }
-
 
 .login ul li:first-child {
     border-bottom: 1px solid white;
@@ -123,8 +135,7 @@ body>*,
 
 .login h5 {
     display: inline-block;
-    position: relative;
-    bottom: 8px;
+    vertical-align: 8px;
 }
 
 /* ********** UPGRADE SECTION *************** */
@@ -150,20 +161,17 @@ body>*,
 .category ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .category ul li a {
-    padding: 0 .5rem;
+    padding: 1rem .5rem;
 }
 
 /* ************ CONTAINER CARD *************** */
 
-.container-row {
-
-}
 
 .row {
-    border: 1px solid rgb(136, 2, 118);
     display: flex;
     flex-grow: 1;
     flex-wrap: nowrap;
@@ -175,47 +183,126 @@ body>*,
     flex-direction: column;
     flex-grow: 1;
     flex-basis: 0;
-    border: 1px dashed yellow;
 }
 
 .col-1-6 {
-    aspect-ratio: 1/1;
-    flex-basis: calc((100% / 6)  - var(--my-gap));
+    flex-grow: 0;   
+    flex-basis: calc((100% / 6) - var(--my-gap));
 }
 
+
+/* ***********************Card section**************** */
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: auto;
+}
 .bg-card{
-    
+    background-size: contain;
+    min-height: 100px;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
 }
 
-.description-card{
+.description-card {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+}
 
+.description-card p, .suggest-row>p, .popular-row>p{
+    font-size: .8rem;
+    color: var(--color-link);
 }
 
 
 
 
+@media screen and (max-width: 1100px) {
 
-
-@media screen and (max-width: 1400px) {}
-
-@media screen and (max-width: 878px) {
     .row {
-        border: 1px solid rgb(27, 2, 136);
         display: flex;
         flex-wrap: wrap;
         gap: var(--my-gap);
     }
-    .col-med{
+
+    .col-med {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+    .col-med-1-2{
         flex-grow: 0;
         flex-basis: 0;
-        border: 1px dashed yellow;
     }
 
-    .col-1-4-med{
-        flex-basis:calc(100% / 5);
+    .col-1-4-med {
+        flex-basis: calc((100% / 4) - var(--my-gap));
     }
 }
 
-@media screen and (max-width: 639px) {}
+@media screen and (max-width: 750px) {
 
-@media screen and (max-width: 552px) {}
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--my-gap);
+    }
+    .col-sm{
+        flex-grow: 1;
+        flex-basis: 0; 
+    }
+    .col-1-2-sm{
+
+        flex-basis: calc((100% / 2) - var(--my-gap));
+    }
+
+}
+
+@media screen and (max-width: 552px) {
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--my-gap);
+    }
+    .col-1-2-sm{
+
+        flex-basis: calc((100% / 2) - var(--my-gap));
+    }
+
+    .navbar{
+        width: 30px;
+        padding: .5rem;
+        align-items: center;
+    }
+    .mobile{
+        display: block;
+    }
+
+    .icon{
+        margin: 0;
+    }
+    .logo-big{
+        display: none;
+    }
+    .desktop{
+        display: none;
+    }
+    .login{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .main-container>*{
+        min-width: 50px;
+    }
+    .login ul li:first-child{
+        border: 0;
+        margin: .2rem;
+    }
+    .login ul li:first-child{
+
+    }
+
+}
