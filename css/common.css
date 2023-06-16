@@ -5,9 +5,6 @@ ul{
 span{
     display: inline-block;
 }
-a:hover img{
-    filter: brightness(100%);
-}
 a{
     display: inline-block;
     font-size: .8rem;
@@ -15,6 +12,13 @@ a{
     text-decoration: none;
     font-weight: bolder;
 }
+
+/**************** Hover Section **************/
+a:hover img, .home-container>.icon:hover{
+    filter: brightness(100%);
+    cursor: pointer;
+}
+
 a:hover{
     color: white;
 }
@@ -44,6 +48,12 @@ a:hover{
 .pd-1t-1b{
     padding: 1rem 0;
 }
+.pd_5b{
+    padding-bottom: .5rem;
+}
+.pd_5l_5r{
+    padding: 0 .5rem; 
+}
 
 .pd-1b{
     padding-bottom: 1rem;
@@ -65,23 +75,23 @@ button:hover{
 }
 
 /************BORDO VERDE**************/
-.home-container .desktop li:first-child{
-    border-left: 3px var(--color-icon) solid;    
-}
 
 .category hr{
+    display: none;
     margin-top: -10px;
     margin-left: auto;
     margin-right: auto;
     border-color: var(--color-icon);
-    height: 1px;
-
     width: 30px;
-
+}
+.category li:hover hr{
+    display: block;
+}
+.home-container .desktop li:hover{
+    border-left: 3px var(--color-icon) solid;    
 }
 
-
-.home-container .desktop li:first-child a{
+.home-container .desktop li a{
     margin-left: -5px;
 }
 /***************************************/
@@ -125,5 +135,11 @@ button:hover{
 }
 .popular-row div:nth-child(2) .bg-card{
     background-image: url(../img/einaudi.jpeg);
+}
+
+/* *************  Minicard Background img  ***************** */
+
+.minicard .bg-minicard{
+    background-image: url(../img/sinister.jpeg);
 }
 
