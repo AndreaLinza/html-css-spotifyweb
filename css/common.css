@@ -18,6 +18,24 @@ a{
 a:hover{
     color: white;
 }
+.link-up{
+    position: relative;
+    bottom: 9px;
+}
+.link-up-sm{
+    position: relative;
+    left: 5px;
+    bottom: 4px;
+}
+.icon{
+    filter: brightness(70%);
+    display:inline-block;
+    margin-left: 1rem;
+    width: 1.5rem;
+}
+.icon-sm{
+    width: 1rem;
+}
 
 .pd-1all{
     padding: 1rem;
@@ -29,7 +47,43 @@ a:hover{
     margin-bottom: 1rem;
 }
 
+button{
+    background-color: var(--color-top-nav);
+    color: white;
+    padding: .8rem 2rem;
+    border-radius: 1.5rem;
+    margin-right: .5rem;
+}
+
 
 .home-container li{
     border-left: 2px var(--color-icon) solid;    /************BORDO VERDE**************/
 }
+
+
+/* ************* Background Img Album**************** */
+.row-recently .bg-card{
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.row-recently div:first-child .bg-card{
+    background-image: url(../img/metal_lifting.jpg);
+    
+}
+.row-recently div:nth-child(2) .bg-card{
+    background-image: url(../img/stranger.jpeg);
+}
+.row-recently div:nth-child(3) .bg-card{
+    background-image: url(../img/aquietplace.jpeg);
+}
+.row-recently div:nth-child(4) .bg-card{
+    background-image: url(../img/split.jpeg);
+}
+.row-recently div:nth-child(5) .bg-card{
+    background-image: url(../img/cure.jpeg);
+}
+.row-recently div:nth-child(6) .bg-card{
+    background-image: url(../img/sinister.jpeg);
+}
+
