@@ -68,7 +68,7 @@ button{
     color: white;
     padding: .8rem 2rem;
     border-radius: 1.5rem;
-    margin-right: .5rem;
+    margin-right: 1.5rem;
 }
 button:hover{
     cursor: pointer;

@@ -40,6 +40,8 @@ body>*,
 
 }
 
+
+
 .main-content-container {
     background-color: var(--color-principal);
     flex-grow: 1;
@@ -48,7 +50,7 @@ body>*,
 
 /* ********* NAV BAR LATERALE*********** */
 .navbar {
-    z-index: 2;
+    z-index: 10;
     background-color: var(--color-secondary);
     width: 200px;
     overflow: auto;
@@ -143,7 +145,15 @@ body>*,
     width: 100%;
     text-align: end;
     line-height: 80px;
+    z-index: 1;
 }
+.upgrade button:hover{
+
+    margin-right: 2rem;
+    transform: scale(120%);
+
+}
+
 
 /****************** MAIN CONTENT ********************/
 .main-content {
@@ -182,7 +192,7 @@ body>*,
 }
 
 .col-1-6 {
-    flex-grow: 0;   
+    flex-grow: 0;
     flex-basis: calc((100% / 6) - var(--my-gap));
 }
 
@@ -193,12 +203,35 @@ body>*,
     flex-direction: column;
     flex-grow: 1;
     overflow: auto;
+    position: relative;
 }
 .bg-card{
+    display: flex;
+    position: relative;
     background-size: contain;
     min-height: 100px;
     aspect-ratio: 1/1;
     background-repeat: no-repeat;
+}
+.playhover{
+    
+    display: none;
+    margin: auto;
+    align-self: center;
+    font-size: 70px;
+    color: rgb(230, 233, 236);
+
+}
+.playhover i{
+   
+}
+
+.bg-card:hover{
+    opacity: .5;
+}
+.bg-card:hover .playhover{
+    display: block;
+    
 }
 
 .description-card {
@@ -218,31 +251,64 @@ body>*,
     padding: 0 1rem;
     background-color: var(--color-bottom-nav);
     display: flex;
-    align-items: center;
     justify-content: space-between;
     overflow: auto;
 }
 
 /**************** Sezione di Sinistra ********************/
+
+.left-play-nav-container{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
 .left-container{
-    display: flex;   
+    display: flex;
+}
+.minicard{
+    display: flex;
+    flex-grow: 1;
+    overflow: auto;
+    align-items: center;
 }
 .description-minicard{
     padding: 0 1rem;
+}
+.description-minicard a:hover{
+    text-decoration: underline;
 }
 .left-container div:nth-child(2) ul{
     display: flex;
     padding: 1rem;
 }
 
-/****************Sezione Centrale *******************/
-
-.central-container div:first-child ul{
-    display: flex; 
-    align-items: center;
-    justify-content: center;  
+.bg-minicard{
+    background-size: contain;
+    min-height: 50px;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
 }
+
+
+/****************Sezione Centrale *******************/
+.central-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: .8rem;
+    flex-grow: 1;
+}
+.central-container>div:first-child ul{
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    justify-content: center;
+    margin: auto;
+}
+
 .central-container a{
+    padding: 0 1rem;
     color: white;
     font-size: 1rem;
 }
@@ -250,11 +316,17 @@ body>*,
 .central-container div:first-child ul li:nth-child(3) a{
     font-size: 2.3rem;
 }
+.central-container div:first-child ul li:nth-child(3) a:hover{
+    transform: scale(120%);
+}
+
 
 .central-container div:last-child{
     display: flex;
     align-items: center;
-    justify-content: center;
+}
+.line{
+    flex-grow: 1;
 }
 
 .time{
@@ -263,24 +335,45 @@ body>*,
 }
 
 .bar{
-    width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
     height: 5px;
-    background-color: red;
+    border-radius: 20px;
+    background-color: var(--color-link);
+    cursor: pointer;
+}
+.bar:hover .minibar{
+    background-color: var(--color-icon);
 }
 .minibar{
-    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    min-width: 10%;
+    flex-basis: 20%;
     height: 5px;
     background-color: #aca5a3;
+    border-radius: 20px;
 }
+
 .round{
-    position: relative;
+    display: none;
     border-radius: 50%;
-    left: 50px;
     width: 15px;
     height: 15px;
     background-color: #aca5a3;
 }
+.bar:hover .round{
+    display: block;
+}
+
 /***************** Sezione di Destra ***************/
+.right-container{
+    display: flex;
+    justify-content: end;
+    flex-grow: 1;
+}
 .right-container ul{
     display: flex;
     align-items: center;
@@ -289,19 +382,65 @@ body>*,
 .right-container ul a{
     color: white;
 }
-li{
+.right-container li{
     display: flex;
+    align-items: center;
 }
 .volume-bar{
-    width: 100px;  
+    min-width: 100px;
     height: 5px;
-    background-color: #A5FD52;
+    background-color: #aca5a3;
+    border-radius: 20px;
 }
+.volume-bar>div{
+    display: flex;
+    align-items: center;
+}
+
 .volume-minibar{
-    width: 30px;
+    min-width: 30px;
     height: 5px;
     background-color: aliceblue;
+    border-radius: 20px;
 }
+.volumeround{ 
+    position: relative;
+    bottom:5px
+}
+
+/* .bar{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    height: 5px;
+    border-radius: 20px;
+    background-color: var(--color-link);
+    cursor: pointer;
+}
+.bar:hover .minibar{
+    background-color: var(--color-icon);
+}
+.minibar{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    min-width: 10%;
+    flex-basis: 20%;
+    height: 5px;
+    background-color: #aca5a3;
+    border-radius: 20px;
+}
+
+.round{
+    display: block;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #aca5a3;
+}
+.bar:hover .round{
+    display: block;
+} */
 
 
 
@@ -311,16 +450,6 @@ li{
 /**************** MINICARD SECTION ************/
 
 
-.minicard{
-    display: flex;
-    align-items: center;
-}
-.bg-minicard{
-    background-size: contain;
-    height: 50px;
-    aspect-ratio: 1/1;
-    background-repeat: no-repeat;
-}
 
 
 
@@ -346,12 +475,9 @@ li{
         flex-basis: calc((100% / 4) - var(--my-gap));
     }
 
-    .bar{
-        width: 300px;
-    }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
 
     .row {
         display: flex;
@@ -360,16 +486,32 @@ li{
     }
     .col-sm{
         flex-grow: 1;
-        flex-basis: 0; 
+        flex-basis: 0;
     }
     .col-1-2-sm{
 
         flex-basis: calc((100% / 2) - var(--my-gap));
     }
 
+    .left-container div:nth-child(2) ul{
+        display: block;
+        padding: 1rem 0;
+    }
+    .left-container div:nth-child(2) ul a{
+        padding: .2rem;
+    }
+
+    .right-container  ul ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .right-container  ul ul a{
+        padding: .2rem;
+    }
+
 }
 
-@media screen and (max-width: 552px) {
+@media screen and (max-width: 652px) {
 
     .row {
         display: flex;
@@ -403,13 +545,26 @@ li{
         padding: 0;
         margin: 0;
     }
-    
+
     .main-container>*{
         min-width: 50px;
     }
     .login ul li:first-child{
         border: 0;
         margin: .2rem;
+    }
+
+    .volume-bar{
+        min-width: 50px;
+        height: 5px;
+        background-color: #aca5a3;
+        border-radius: 20px;
+    }
+    .volume-minibar{
+        min-width: 15px;
+        height: 5px;
+        background-color: aliceblue;
+        border-radius: 20px;
     }
 
 }
