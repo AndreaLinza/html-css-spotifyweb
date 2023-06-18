@@ -568,17 +568,4 @@ body>*,
         padding-right: 0;;
     }
 
-    .volume-bar {
-
-        max-width: 50px;
-        height: 5px;
-
-    }
-
-    .volume-minibar {
-
-        width: 20px;
-        height: 5px;
-        
-    }
 }
