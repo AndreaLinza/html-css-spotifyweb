@@ -60,7 +60,7 @@ body>*,
     justify-content: space-between;
 }
 
-.mobile{
+.mobile {
     display: none;
 }
 
@@ -147,10 +147,11 @@ body>*,
     line-height: 80px;
     z-index: 1;
 }
-.upgrade button:hover{
+
+.upgrade button:hover {
 
     margin-right: 2rem;
-    transform: scale(120%);
+    transform: scale(1.2);
 
 }
 
@@ -198,40 +199,38 @@ body>*,
 
 
 /* *********************** CARD SECTION **************** */
-.card{
+.card {
+    
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     overflow: auto;
     position: relative;
 }
+
 .bg-card{
     display: flex;
-    position: relative;
     background-size: contain;
     min-height: 100px;
     aspect-ratio: 1/1;
     background-repeat: no-repeat;
 }
-.playhover{
-    
+
+.playhover {   
     display: none;
     margin: auto;
     align-self: center;
     font-size: 70px;
-    color: rgb(230, 233, 236);
-
-}
-.playhover i{
-   
+    color: rgb(255, 255, 255);
 }
 
-.bg-card:hover{
+.bg-card:hover {
     opacity: .5;
 }
-.bg-card:hover .playhover{
+
+.bg-card:hover .playhover {
     display: block;
-    
+
 }
 
 .description-card {
@@ -240,14 +239,17 @@ body>*,
     font-size: 1rem;
 }
 
-.description-card p, .suggest-row>p, .popular-row>p, .description-minicard>p{
+.description-card p,
+.suggest-row>p,
+.popular-row>p,
+.description-minicard>p {
     font-size: .8rem;
     color: var(--color-link);
 }
 
 /***************** BARRA INFERIORE PER ASCOLTO **********************/
 
-.play-nav-bottom{
+.play-nav-bottom {
     padding: 0 1rem;
     background-color: var(--color-bottom-nav);
     display: flex;
@@ -257,33 +259,37 @@ body>*,
 
 /**************** Sezione di Sinistra ********************/
 
-.left-play-nav-container{
+.left-play-nav-container {
     display: flex;
     align-items: center;
     flex-grow: 1;
 }
 
-.left-container{
+.left-container {
     display: flex;
 }
-.minicard{
+
+.minicard {
     display: flex;
     flex-grow: 1;
     overflow: auto;
     align-items: center;
 }
-.description-minicard{
+
+.description-minicard {
     padding: 0 1rem;
 }
-.description-minicard a:hover{
+
+.description-minicard a:hover {
     text-decoration: underline;
 }
-.left-container div:nth-child(2) ul{
+
+.left-container div:nth-child(2) ul {
     display: flex;
     padding: 1rem;
 }
 
-.bg-minicard{
+.bg-minicard {
     background-size: contain;
     min-height: 50px;
     aspect-ratio: 1/1;
@@ -292,14 +298,15 @@ body>*,
 
 
 /****************Sezione Centrale *******************/
-.central-container{
+.central-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding-bottom: .8rem;
     flex-grow: 1;
 }
-.central-container>div:first-child ul{
+
+.central-container>div:first-child ul {
     display: flex;
     align-items: center;
     padding-top: 1rem;
@@ -307,34 +314,36 @@ body>*,
     margin: auto;
 }
 
-.central-container a{
+.central-container a {
     padding: 0 1rem;
     color: white;
     font-size: 1rem;
 }
 
-.central-container div:first-child ul li:nth-child(3) a{
+.central-container div:first-child ul li:nth-child(3) a {
     font-size: 2.3rem;
 }
-.central-container div:first-child ul li:nth-child(3) a:hover{
-    transform: scale(120%);
+
+.central-container div:first-child ul li:nth-child(3) a:hover {
+    transform: scale(1.2);
 }
 
 
-.central-container div:last-child{
+.central-container div:last-child {
     display: flex;
     align-items: center;
 }
-.line{
+
+.line {
     flex-grow: 1;
 }
 
-.time{
+.time {
     padding: 0 1rem;
     font-size: .7rem;
 }
 
-.bar{
+.bar {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
@@ -343,10 +352,12 @@ body>*,
     background-color: var(--color-link);
     cursor: pointer;
 }
-.bar:hover .minibar{
+
+.bar:hover .minibar {
     background-color: var(--color-icon);
 }
-.minibar{
+
+.minibar {
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -357,104 +368,65 @@ body>*,
     border-radius: 20px;
 }
 
-.round{
+.round {
     display: none;
     border-radius: 50%;
     width: 15px;
     height: 15px;
     background-color: #aca5a3;
 }
-.bar:hover .round{
+
+.bar:hover .round {
     display: block;
 }
 
 /***************** Sezione di Destra ***************/
-.right-container{
+.right-container {
     display: flex;
     justify-content: end;
     flex-grow: 1;
 }
-.right-container ul{
+
+.right-container ul {
     display: flex;
     align-items: center;
 
 }
-.right-container ul a{
+
+.right-container ul a {
     color: white;
 }
-.right-container li{
+
+.right-container li {
     display: flex;
     align-items: center;
 }
-.volume-bar{
+
+.volume-bar {
     min-width: 100px;
     height: 5px;
-    background-color: #aca5a3;
+    background-color: var(--color-link) ;
     border-radius: 20px;
 }
-.volume-bar>div{
+
+.volume-bar>div {
     display: flex;
     align-items: center;
 }
 
-.volume-minibar{
+.volume-minibar {
     min-width: 30px;
     height: 5px;
-    background-color: aliceblue;
+    background-color: #aca5a3;
     border-radius: 20px;
 }
-.volumeround{ 
+
+.volumeround {
     position: relative;
-    bottom:5px
+    bottom: 5px
 }
 
-/* .bar{
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    height: 5px;
-    border-radius: 20px;
-    background-color: var(--color-link);
-    cursor: pointer;
-}
-.bar:hover .minibar{
-    background-color: var(--color-icon);
-}
-.minibar{
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    min-width: 10%;
-    flex-basis: 20%;
-    height: 5px;
-    background-color: #aca5a3;
-    border-radius: 20px;
-}
-
-.round{
-    display: block;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background-color: #aca5a3;
-}
-.bar:hover .round{
-    display: block;
-} */
-
-
-
-
-
-
-/**************** MINICARD SECTION ************/
-
-
-
-
-
-
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 980px) {
 
     .row {
         display: flex;
@@ -466,7 +438,8 @@ body>*,
         flex-grow: 1;
         flex-basis: 0;
     }
-    .col-med-1-2{
+
+    .col-med-1-2 {
         flex-grow: 0;
         flex-basis: 0;
     }
@@ -477,94 +450,135 @@ body>*,
 
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 750px) {
 
     .row {
         display: flex;
         flex-wrap: wrap;
         gap: var(--my-gap);
     }
-    .col-sm{
+
+    .col-sm {
         flex-grow: 1;
         flex-basis: 0;
     }
-    .col-1-2-sm{
+
+    .col-1-2-sm {
 
         flex-basis: calc((100% / 2) - var(--my-gap));
     }
 
-    .left-container div:nth-child(2) ul{
+    .left-container div:nth-child(2) ul {
         display: block;
         padding: 1rem 0;
     }
-    .left-container div:nth-child(2) ul a{
+
+    .left-container div:nth-child(2) ul a {
         padding: .2rem;
     }
 
-    .right-container  ul ul{
+    .right-container ul ul {
         display: flex;
         flex-direction: column;
     }
-    .right-container  ul ul a{
+
+    .right-container ul ul a {
         padding: .2rem;
     }
 
 }
 
-@media screen and (max-width: 652px) {
+@media screen and (max-width: 600px) {
 
     .row {
         display: flex;
         flex-wrap: wrap;
         gap: var(--my-gap);
     }
-    .col-1-2-sm{
+
+    .col-1-2-sm {
 
         flex-basis: calc((100% / 2) - var(--my-gap));
     }
 
-    .navbar{
+    .navbar {
         width: 30px;
         padding: .5rem;
         align-items: center;
     }
-    .mobile{
+
+    .mobile {
         display: block;
     }
 
-    .icon{
+    .icon {
         margin: .5rem 0;
     }
-    .logo-big{
+
+    .logo-big {
         display: none;
     }
-    .desktop{
+
+    .desktop {
         display: none;
     }
-    .login{
+
+    .login {
         padding: 0;
         margin: 0;
     }
 
-    .main-container>*{
+    .main-container>* {
         min-width: 50px;
     }
-    .login ul li:first-child{
+
+    .login ul li:first-child {
         border: 0;
         margin: .2rem;
+
+    }
+    .description-minicard{
+        padding: 0 .5rem;
     }
 
-    .volume-bar{
-        min-width: 50px;
-        height: 5px;
-        background-color: #aca5a3;
-        border-radius: 20px;
+
+    .central-container>div:first-child ul{
+        padding-top: .5rem;
     }
-    .volume-minibar{
-        min-width: 15px;
-        height: 5px;
-        background-color: aliceblue;
-        border-radius: 20px;
+    .central-container>div{
+        justify-content: space-around;
+    }
+    .central-container a{
+        padding: 0 .5rem;
+    }
+    .line{
+        position: relative;
     }
 
+    .time:first-child{
+        position: absolute;
+        left: 0;
+        top: 25px;
+        padding-left:0 ;
+    }
+    .time:last-child{
+        position: absolute;
+        right: 0;
+        top: 25px;
+        padding-right: 0;;
+    }
+
+    .volume-bar {
+
+        max-width: 50px;
+        height: 5px;
+
+    }
+
+    .volume-minibar {
+
+        width: 20px;
+        height: 5px;
+        
+    }
 }
