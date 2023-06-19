@@ -225,13 +225,17 @@ body>*,
     color: rgb(255, 255, 255);
 }
 
-.bg-card:hover {
-    opacity: .5;
-}
 
 .bg-card:hover .playhover {
-    display: block;
-
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.popular-row .bg-card:hover .playhover {
+    border-radius: 50%;
 }
 
 .description-card {
